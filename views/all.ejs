@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            /* border-bottom:1px solid black; */
+            margin-bottom:20px;
+            padding:20px;
+            background-color: #dbe8e6;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 400;
+            box-shadow: 2px 2px 6px #282727;
+        }
+    </style>
+
+
+</head>
+<body>
+   <h1>All Students</h1>
+   <!-- all the students go here -->
+   <!-- <p>Number of students: <%= s.length %></p>
+
+
+   <p>Name:<%= s[0].name %></p>
+   <p>Id:  <%= s[0]._id %></p>
+   <p>GPA:<%= s[0].gpa %></p>
+   <p>Did you pay tuition? <%= s[0].tuitionPaid %></p>
+
+
+   <p>Name:<%= s[1].name %></p>
+   <p>Id:  <%= s[1]._id %></p>
+   <p>GPA:<%= s[1].gpa %></p>
+   <p>Did you pay tuition? <%= s[1].tuitionPaid %></p>
+
+
+   <p>Name:<%= s[2].name %></p>
+   <p>Id:  <%= s[2]._id %></p>
+   <p>GPA:<%= s[2].gpa %></p>
+   <p>Did you pay tuition? <%= s[2].tuitionPaid %></p> -->
+   
+    
+   <!-- UPdated Code -->
+   <h3>Number of students: <%= s.length %></h3>
+   <% for (let i = 0; i < s.length; i++) { %>  
+       <div>
+           <p><strong>Name: </strong><%= s[i].name %></p>
+           <p><strong>ID: </strong><%= s[i]._id %></p>
+           <p><strong>GPA: </strong><%= s[i].gpa %></p>
+           <p><strong>Did you pay tuition? </strong> <%= s[i].tuitionPaid %></p>
+           <a href="/delete2/<%= s[i]._id %>">Delete Student record</a>
+       </div>    
+   <% } %>
+
+</body>
+</html>
